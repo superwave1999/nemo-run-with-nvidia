@@ -1,22 +1,21 @@
-# version 0.0.4
-
+# version 0.0.5
 [Nemo Action]
+Name=Run with NVIDIA GPU
+Name[it]=Esegui con la GPU NVIDIA
+Name[es]=Ejecutar con la GPU NVIDIA
 
-Name[en_GB]=Run with nVidia GPU
-Name[it]=Esegui con la GPU nVidia
+Comment=Run %f with dedicated NVIDIA graphics card
+Comment[it]=Esegui %f con la scheda grafica dedicata NVIDIA
+Comment[es]=Ejecuta %f con la tarjeta gráfica dedicada NVIDIA
 
-Comment[en_GB]=Run %f with dedicated nVidia graphic card
-Comment[it]=Esegui %f con la scheda grafica dedicata nVidia
-
-Exec=optirun %F
+Exec=<scripts/run-with-nvidia.sh "%F">
 
 Icon-Name=nvidia-settings
 
 Selection=s
 
-Mimetypes=application/x-executable;application/x-shellscript;text/x-script.phyton;application/x-bytecode.python;
+Mimetypes=application/x-executable;application/x-shellscript;text/x-script.python;application/x-bytecode.python;
 
-Dependencies=optirun;
+Dependencies=nvidia-settings;
 
 EscapeSpaces=true
-
